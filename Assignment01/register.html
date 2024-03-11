@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="registerstyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <center>
+    <h2>Registration Form</h2>
+        <form action="#" method="POST">
+            <span class="post">
+                <label for="company_name" class="company_name">ชื่อบริษัท</label><br>
+                <input type="text" id="company_name" name="company_name" placeholder="Company name" class="submit" required><br>
+                
+                <label for="booth_size">ขนาดบูธ</label><br>
+                <select id="booth_size" name="booth_size" class="submit">
+                    <option value="10x10">10x10 ฟุต</option>
+                    <option value="10x15">10x15 ฟุต</option>
+                </select><br>
+                
+                <label for="num_chairs">จำนวนเก้าอี้</label><br>
+                <input type="number" id="num_chairs" name="num_chairs" min="0" value="0" class="submit" required><br>
+                
+                <label for="contact_name">ชื่อผู้ติดต่อ</label><br>
+                <input type="text" id="contact_name" name="contact_name" placeholder="Contact name" class="submit" required><br>
+                
+                <label for="contact_phone">เบอร์ผู้ติดต่อ</label><br>
+                <input type="tel" id="contact_phone" name="contact_phone" placeholder="081-234-5678" class="submit" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br>
+                
+                <input type="checkbox" id="table_in_booth" name="table_in_booth">
+                <label for="table_in_booth">ต้องการโต๊ะตั้งในบูธ</label><br><br>
+
+                <input type="submit" value="Submit" class="submit_button">
+            </span>
+        </form>
+        <br><br><p class="id_name">6633185721 ภัทรดนัย ถนอมสิทธิกุล</p>
+    </center>
+</body>
+</html>
