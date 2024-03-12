@@ -1,0 +1,21 @@
+.banner{
+    display: block;
+    padding:5px;
+    margin: 0;
+    width:100vw;
+    height:80vh;
+    position: relative;
+}
+
+.bannerText{
+    position:relative;
+    top:100px;
+    left:80px;
+    text-align: left;
+    z-index: 20;
+    color:white;
+    font-style: italic;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 300;
+    font-size:larger;
+}
