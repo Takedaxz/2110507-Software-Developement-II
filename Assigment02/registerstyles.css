@@ -1,0 +1,55 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+center {
+    margin-top: 50px;
+}
+
+h2 {
+    color: black;
+}
+
+form {
+    background-color: #fff;
+    font-family: "Prompt", sans-serif;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.submit{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.submit_button{
+    background-color: rgb(212, 19, 19);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.submit_button:hover {
+    background-color: rgb(161, 39, 39);
+}
+
+.id_name{
+    font-family: "Prompt", sans-serif;
+    font-weight: light;
+}
