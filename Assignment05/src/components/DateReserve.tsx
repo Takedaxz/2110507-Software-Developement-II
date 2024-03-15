@@ -28,7 +28,7 @@ export default function LocationDateReserve(){
             <div>
                 Vaccine Service Center
             </div>
-            <Select className='h-[2em] w-[200px]' value=''>
+            <Select className='h-[2em] w-[200px]' name='location' id='location'>
                 <MenuItem value='Chula'>Chulalongkorn Hospital</MenuItem>
                 <MenuItem value='Rajavithi'>Rajavithi Hospital</MenuItem>
                 <MenuItem value='Thammasat'>Thammasat University Hospital</MenuItem>

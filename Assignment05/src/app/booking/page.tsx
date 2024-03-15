@@ -12,7 +12,7 @@ export default function Reservations(){
                 </div>
                 <LocationDateReserve/>
             </div>
-            <button className='block rounded-md bg-sky-600 hover:bg-indigo-600 px-3 py-2 shadow-sm text-white'>
+            <button name='Book-Vaccine'className='block rounded-md bg-sky-600 hover:bg-indigo-600 px-3 py-2 shadow-sm text-white'>
                 Book Vaccine
             </button>
         </main>
