@@ -1,13 +1,24 @@
 'use client'
 import ProductCard from "./ProductCard"
-import { useReducer,useRef } from "react"
+import { useReducer,useRef,useEffect, useState } from "react"
 import Link from "next/link"
+import getCars from "@/libs/getCars"
 
 export default function CarPanel(){
 
     let count=0
     const countRef=useRef(0)
     const inputRef=useRef<HTMLInputElement>(null)
+
+    const [carResponse,setCarResponse]=useState(null)
+
+    useEffect(()=>{
+        const fetchData=async()=>{
+            const cars=await getCars()
+            setCarResponse(cars)
+        }
+        fetchData()
+    },[])
 
     const compareReducer = (compareList:Set<string>, action:{type:string, carName:string})=>{
         switch(action.type){
@@ -25,18 +36,20 @@ export default function CarPanel(){
 
     const [compareList,dispatchCompare]= useReducer(compareReducer,new Set<string>())
 
-    const mockCarRepo=[{cid:'001',name:'Honda Civic',image:'/img/civic.jpg'},
-    {cid:'002',name:'Honda Accord',image:'/img/accord.jpg'},
-    {cid:'003',name:'Toyota Fortuner',image:'/img/fortuner.jpg'},
-    {cid:'004',name:'Tesla Model 3',image:'/img/tesla.jpg'}]
+    // const mockCarRepo=[{cid:'001',name:'Honda Civic',image:'/img/civic.jpg'},
+    // {cid:'002',name:'Honda Accord',image:'/img/accord.jpg'},
+    // {cid:'003',name:'Toyota Fortuner',image:'/img/fortuner.jpg'},
+    // {cid:'004',name:'Tesla Model 3',image:'/img/tesla.jpg'}]
+
+    if(!carResponse) return (<p>car Panel is Loading...</p>)
 
     return(
         <div>
             <div style={{margin:"20px", display:"flex", flexDirection:"row", alignContent:"space-around",justifyContent:"space-around",flexWrap:"wrap"}}>
             {
-                mockCarRepo.map((carItem)=>(
+               carResponse.data.map((carItem)=>(
                     <Link href={`/car/${carItem.cid}`} className="w-1/5">
-                    <ProductCard carName={carItem.name} imgSrc={carItem.image}
+                    <ProductCard carName={carItem.name} imgSrc={carItem.picture}
                     onCompare={(car:string)=>dispatchCompare({type:'add',carName:car})}/>
                     </Link>
                 ))
